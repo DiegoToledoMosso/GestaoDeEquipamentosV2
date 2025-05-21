@@ -29,13 +29,20 @@ class Program
 
 public class TelaEquipamento
 {
-    public char ApresentarMenu()
-    {
 
+    public RepositorioEquipamento repositorioEquipamento = new RepositorioEquipamento();
+
+    public void ExibirCabecalho()
+    {
         Console.Clear();
         Console.WriteLine("Gestão de Equipamentos");
 
         Console.WriteLine();
+    }
+    public char ApresentarMenu()
+    {
+
+        ExibirCabecalho();
 
         Console.WriteLine("1 - Cadastro de Equipamento");
         Console.WriteLine("2 - Visualizar Equipamentos");
@@ -76,13 +83,43 @@ public class TelaEquipamento
         equipamento.fabricante = fabricante;
         equipamento.dataFabricacao = datafabricacao;
 
+        repositorioEquipamento.equipamentos[0] = equipamento;
+
         Console.WriteLine($"\nEquipamento \"{equipamento.nome}\" foi cadastrado com sucesso!");
         Console.WriteLine();
     }
+
     public void VisualizarRegistros()
     {
-        throw new NotImplementedException();
+        ExibirCabecalho();
+
+        Console.WriteLine("Visualização de Equipamentos");
+
+        Console.WriteLine(  );
+
+        Console.WriteLine(
+            "{0, -10} | {1, -20} | {2, -10} | {3, -10} | {4, -20} | {5, -20}",
+            "Id" , "Nome" , "Preço de Aquisição" , " Número de Série", " Fabricante" , " Data de Fabricação"
+            );
+
+        Equipamento[] equipamentos = repositorioEquipamento.equipamentos; 
+
+        for ( int i = 0;  i < equipamentos.Length; i++ )
+        {
+            Equipamento e = equipamentos[i];
+
+            if ( e == null ) 
+                continue;
+
+            Console.WriteLine(
+            "{0, -10} | {1, -20} | {2, -10} | {3, -10} | {4, -20} | {5, -20}",
+            e.id, e.nome, e.precoAquisição.ToString("C2"), e.numeroSerie, e.fabricante, e.dataFabricacao.ToShortDateString()
+            );
+        }
+
+        Console.ReadLine();
     }
+    
 }
 
 public class Equipamento
@@ -95,3 +132,7 @@ public class Equipamento
     public DateTime dataFabricacao;
 }
 
+public class RepositorioEquipamento
+{
+    public Equipamento[] equipamentos = new Equipamento[100];
+}
