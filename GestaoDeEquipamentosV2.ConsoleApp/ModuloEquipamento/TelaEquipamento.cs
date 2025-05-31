@@ -3,7 +3,7 @@
 public class TelaEquipamento
 {
 
-    public RepositorioEquipamento repositorioEquipamento = new RepositorioEquipamento();
+    public RepositorioEquipamento repositorioEquipamento;
 
     public void ExibirCabecalho()
     {
@@ -32,7 +32,9 @@ public class TelaEquipamento
 
     public void CadastrarRegistro()
     {
-        Console.Clear();
+
+        ExibirCabecalho();
+        
         Console.WriteLine("Cadastro de Equipamento");
 
         Console.WriteLine("");
