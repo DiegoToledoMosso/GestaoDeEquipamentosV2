@@ -133,8 +133,6 @@ public class TelaEquipamento
             return;
         }
 
-
-
         Console.WriteLine($"\nEquipamento excluido com sucesso!");
         Console.WriteLine();
     }
