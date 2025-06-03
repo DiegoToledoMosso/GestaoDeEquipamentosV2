@@ -46,7 +46,7 @@ public class TelaChamado
         Console.ReadLine();
     }    
 
-    public void EditarChamados()
+    public void EditarRegistro()
     {
         ExibirCabecalho();
 
@@ -75,7 +75,7 @@ public class TelaChamado
         Console.WriteLine();
     }
 
-    public void ExcluirChamados()
+    public void ExcluirRegistro()
     {
         ExibirCabecalho();
 

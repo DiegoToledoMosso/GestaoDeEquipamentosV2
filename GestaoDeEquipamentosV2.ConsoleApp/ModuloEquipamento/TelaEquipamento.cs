@@ -80,7 +80,7 @@ public class TelaEquipamento
         Console.ReadLine();
     }
 
-    public void EditarEquipamentos()
+    public void EditarRegistro()
     {
         ExibirCabecalho();
 
@@ -108,7 +108,7 @@ public class TelaEquipamento
         Console.WriteLine($"\nEquipamento \"{equipamentoAtualizado.nome}\" foi editado com sucesso!");
         Console.WriteLine();
     }
-    public void ExcluirEquipamentos()
+    public void ExcluirRegistro()
     {
         ExibirCabecalho();
 
