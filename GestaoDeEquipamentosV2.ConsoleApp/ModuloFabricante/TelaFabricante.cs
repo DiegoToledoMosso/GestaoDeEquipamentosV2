@@ -152,12 +152,9 @@ public class TelaFabricante
         Console.WriteLine("Digite o telefone do fabricante: ");
         string telefone = Console.ReadLine();
 
-        Fabricante fabricante = new Fabricante();
-
-        fabricante.nome = nome;
-        fabricante.email = email;
-        fabricante.telefone = telefone;
-
+        Fabricante fabricante = new Fabricante(nome, email, telefone);
+        
+        
         return fabricante;
     }
 

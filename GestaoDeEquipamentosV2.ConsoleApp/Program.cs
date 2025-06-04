@@ -17,6 +17,7 @@ class Program
 
         TelaEquipamento telaEquipamento = new TelaEquipamento(); 
         telaEquipamento.repositorioEquipamento = repositorioEquipamento;
+        
 
         TelaChamado telaChamado = new TelaChamado();
         telaChamado.repositorioChamado = repositorioChamado;
