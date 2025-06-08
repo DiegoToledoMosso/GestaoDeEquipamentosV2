@@ -1,4 +1,8 @@
-﻿namespace GestaoDeEquipamentosV2.ConsoleApp.ModuloFabricante;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using System.Net.Mail;
+
+namespace GestaoDeEquipamentosV2.ConsoleApp.ModuloFabricante;
 
 public class Fabricante
 {
@@ -13,6 +17,28 @@ public class Fabricante
         this.email = email;
         this.telefone = telefone;
         
+    }
+    public string Validar()
+    {
+        string erros = "";
+
+        if (string.IsNullOrWhiteSpace(nome))
+            erros += "O nome deve é obrigatório!\n";
+
+        else if (nome.Length < 2)
+            erros += "O nome deve conter mais que 1 caractere.\n";
+
+        if (!MailAddress.TryCreate(email, out _))
+            erros += "O email deve conter um formato válido \"nome@provedor.com\"!\n";
+
+        if (string.IsNullOrWhiteSpace(telefone))
+            erros += "O telefone é obrigatório";
+
+        else if (telefone.Length < 9)
+            erros += "O telefone deve conter no mínimo 9 números!\n";
+
+        return erros;
+
     }
 
 }
