@@ -18,12 +18,7 @@ public class RepositorioEquipamento
 
         if (equipamentoSelecionado == null)
             return false;
-
-        equipamentoSelecionado.nome = equipamentoAtualizado.nome;
-        equipamentoSelecionado.precoAquisição = equipamentoAtualizado.precoAquisição;
-        equipamentoSelecionado.numeroSerie = equipamentoAtualizado.numeroSerie;
-        equipamentoSelecionado.fabricante = equipamentoAtualizado.fabricante;
-        equipamentoSelecionado.dataFabricacao = equipamentoAtualizado.dataFabricacao;
+        
 
         return true;
     }

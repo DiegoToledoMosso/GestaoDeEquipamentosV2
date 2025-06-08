@@ -28,9 +28,8 @@ public class RepositorioFabricante
         if (fabricanteSelecionado == null)
             return false;
 
-        fabricanteSelecionado.nome = fabricantesAtualizado.nome;
-        fabricanteSelecionado.email = fabricantesAtualizado.email;
-        fabricanteSelecionado.telefone = fabricantesAtualizado.telefone;
+        fabricanteSelecionado.AtualizarRegistro(fabricantesAtualizado); 
+              
 
         return true;
     }

@@ -186,7 +186,7 @@ public class TelaChamado
 
             Console.WriteLine(
             "{0, -10} | {1, -20} | {2, -10} | {3, -10} | {4, -20} | {5, -20}",
-            e.id, e.nome, e.precoAquisição.ToString("C2"), e.numeroSerie, e.fabricante, e.dataFabricacao.ToShortDateString()
+            e.id, e.nome, e.precoAquisicao.ToString("C2"), e.numeroSerie, e.fabricante, e.dataFabricacao.ToShortDateString()
             );
         }
 

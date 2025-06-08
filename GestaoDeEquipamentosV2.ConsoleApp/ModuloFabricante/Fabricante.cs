@@ -41,4 +41,11 @@ public class Fabricante
 
     }
 
+    public void AtualizarRegistro(Fabricante fabricantesAtualizado)
+    {
+        this.nome = fabricantesAtualizado.nome;
+        this.email = fabricantesAtualizado.email;
+        this.telefone = fabricantesAtualizado.telefone;
+    }
+
 }
